@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwl.sys.user.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.wwl.sys.user.domain.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="userName" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="realname" />
+        <result column="realName" jdbcType="VARCHAR" property="nickname" />
+    </resultMap>
+
+    <select id="selectById" resultType="com.wwl.sys.user.domain.entity.User">
+        select * from user where id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="com.wwl.sys.user.domain.entity.User">
+        insert into user (id, username, nickname, realname) values (#{id}, #{username}, #{nickname}, #{realname})
+    </insert>
+</mapper>
+
