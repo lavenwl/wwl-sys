@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.wwl.sys.userProvider.mapper.*")
+@MapperScan("com.wwl.sys.user.mapper")
 @SpringBootApplication
 public class UserProviderApplication {
 
